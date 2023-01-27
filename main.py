@@ -45,3 +45,8 @@ class InstaFollower:
             if button.text == "Follow":
                 self.driver.execute_script("arguments[0].click();", button)
                 time.sleep(2)
+                
+bot = InstaFollower(chrome_driver_path)
+bot.login()
+bot.find_followers()
+bot.follow()
